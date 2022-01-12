@@ -1,0 +1,73 @@
+good to note: remember how to do arrays-- 
+let myArray = ["red", "blue", "green", "purple"]
+console.log(myArr[3]) outputs purple
+
+objects
+
+
+expressions are the same or very similar to math
+single = is an assignment (setting x = y)
+double == is an operator (1+2==9/3 returns true)
+!= is not equals
+less than <
+greater than >
+less equal <=
+greater equal >=
+
+
+conditionals
+```
+if (bool) {
+    do something here
+} else if (bool2) {
+    more stuff
+} else {
+    final stuff
+}
+```
+can use && or || for and/or
+
+switch statement
+
+```
+switch (answer) {
+    case "y":
+    case "Y":
+        console.log("Nice! That's great!");
+        break;
+    case "n":
+    case "N":
+        console.log ("Aww man");
+        break;
+    case "":
+        console.log ("At least say something");
+        break;
+    default:
+        console.log "Idk what that means
+        break;
+}
+```
+
+loops
+
+while
+```
+let reply = prompt("Are we there yet?");
+while (reply != "yes") {
+    reply = prompt ("Are we there yet?");
+}
+console.log "finally, we're here!"
+```
+
+for
+
+```
+for (let i = 0; i < 3; i++){
+    wordArr.push(prompt("tell me word #" + i +: "));
+// .push adds something to the end of the list
+}
+console.log(wordArr)
+```
+that format will run x number of times, for 'i < x'
+
+functions
