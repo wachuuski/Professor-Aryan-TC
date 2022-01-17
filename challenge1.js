@@ -7,8 +7,8 @@ function spew(){
 function tallyLift(){
     spew();
     let higher = 0;
-    for (let i = 0; i<=data.length; i++){
-        if (data[i]>data[i-1]){
+    for (let i = 0; i<data.length-1; i++){
+        if (data[i]<data[i+1]){
             higher++;
         }
     }
