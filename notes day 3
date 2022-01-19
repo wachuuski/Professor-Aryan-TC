@@ -1,0 +1,23 @@
+built in libraries
+
+math.x
+math.ceil,math.floor,math.round - rounding
+math.e,math.pi,math.sqrt2 - constants
+math.abs, math.pow(base, power)
+just search up the math library
+
+date/time
+
+const currentDateTime = new Date() - just outputs the system date/time
+const specificDate = new Date([year], [month], [day], [hour], [minute], [second])
+    requires at least year and day
+    with only one input it will assume milliseconds since jan 1 1970
+incrementing date will wrap around like how time works
+date.getDay(), date.getMonth() - take a wild guess what these do
+
+
+variables on their own should always start with lowercase
+objects tend to start with capitals
+
+random
+const rand = Math.random

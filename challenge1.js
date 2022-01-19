@@ -1,21 +1,22 @@
 // console.log(fs.readFileSync('PC1input.txt','utf8'))
 const fs = require ('fs');
 function spew(){
-    data = (fs.readFileSync('PC1input.txt','utf8').split("\n"));
+    return (fs.readFileSync('PC1input.txt','utf8').split("\n"));
 }
 
 function tallyLift(){
-    spew();
+    let data = spew();
     let higher = 0;
-    for (let i = 0; i<data.length-1; i++){
-        if (data[i]<data[i+1]){
+    for (let i = 0; i < data.length - 1; i++){
+        // console.log(data[i], " ", data[i+1]);
+        if (data[i] < data[i+1]){
             higher++;
         }
     }
     console.log(higher);
 }
 function leapCheck(){
-    spew();
+    let data = spew();
     let jump = null;
     for (let i = 0; i<=data.length; i++){
         if (data[i+1]-data[i]>jump){
