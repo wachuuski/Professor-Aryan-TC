@@ -7,9 +7,9 @@ function spew(){
 function tallyLift(){
     let data = spew();
     let higher = 0;
-    for (let i = 0; i < data.length - 1; i++){
+    for (let i = 0; i < data.length-1; i++){
         // console.log(data[i], " ", data[i+1]);
-        if (data[i] < data[i+1]){
+        if (parseInt(data[i]) < parseInt(data[i+1])){
             higher++;
         }
     }
@@ -27,3 +27,16 @@ function leapCheck(){
 }
 tallyLift();
 leapCheck();
+// function tallyTest(){
+//     let data = spew();
+//     let higher = 0;
+//     for (let i = 224; i < 225; i++){
+//         console.log(data[i], " ", data[i+1]);
+//         if (data[i] < data[i+1]){
+//             console.log (data[i+1]-data[i]);
+//             higher++;
+//         }
+//     }
+//     console.log(higher);
+// }
+// tallyTest();
