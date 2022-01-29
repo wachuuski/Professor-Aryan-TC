@@ -1,0 +1,55 @@
+function divisibleBy(num1, num2) {
+    if (Math.floor(num1 / num2) == (num1 / num2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function prime(targetPrime) {
+    console.log("entered function");
+    let testNum = 2;
+    primes = new Array;
+        let index = 0
+        while (true) {
+            if(divisibleBy(testNum,primes[index])==false){
+                primes.push(testNum);
+                console.log(testNum);
+                if(primes.length==targetPrime){
+                    return("Prime #" + targetPrime + " was " + primes[targetPrime.length-1]);
+                }else{
+                    testNum++;
+                }
+            }
+            else{
+                if(divisibleBy(testNum,primes[index])==undefined){
+                    primes.push(testNum);
+                    console.log(testNum);
+                    if(primes.length==targetPrime){
+                        return("Prime #" + targetPrime + " was " + primes[targetPrime.length-1]);
+                  }else{
+                       testNum++;
+                    }
+                }
+                else if(index!=primes.length){
+                    index++;
+                    console.log(index);
+                }else{
+                    testNum++;
+                    console.log(testNum);
+                }
+            }
+            
+        }
+        testNum++;
+        console.log(primes);
+    }
+console.log(prime(10001));
+
+// function prime(targetPrime){
+//     let testNum = 2;
+//     primes = new Array();
+//     while (primes.length<targetPrime-1){
+
+//     }
+// }
