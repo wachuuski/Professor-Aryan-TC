@@ -1,0 +1,48 @@
+{
+  meta: { status: 200 },
+  response: {
+    song: {
+      annotation_count: 1,
+      api_path: '/songs/6287510',
+      apple_music_id: null,
+      apple_music_player_url: 'https://genius.com/songs/6287510/apple_music_player',
+      artist_names: '星街すいせい (Hoshimachi Suisei)',
+      description: [Object],
+      embed_content: "<div id='rg_embed_link_6287510' class='rg_embed_link' data-song-id='6287510'>Read <a href='https://genius.com/Hoshimachi-suisei-next-color-planet-lyrics'>“NEXT COLOR PLANET” by 星街すいせい (Hoshimachi Suisei)</a> on Genius</div> <script crossorigin src='//genius.com/songs/6287510/embed.js'></script>",
+      featured_video: false,
+      full_title: 'NEXT COLOR PLANET by 星街すいせい (Hoshimachi Suisei)',
+      header_image_thumbnail_url: 'https://images.genius.com/a94e74ee43db97a5bbbd94fa5137df64.300x169x1.jpg',
+      header_image_url: 'https://images.genius.com/a94e74ee43db97a5bbbd94fa5137df64.1000x563x1.jpg',
+      id: 6287510,
+      lyrics_owner_id: 12244279,
+      lyrics_placeholder_reason: null,
+      lyrics_state: 'complete',
+      path: '/Hoshimachi-suisei-next-color-planet-lyrics',
+      pyongs_count: 1,
+      recording_location: null,
+      release_date: '2020-03-22',
+      release_date_for_display: 'March 22, 2020',
+      song_art_image_thumbnail_url: 'https://images.genius.com/852f5a9cc447ed04997a6cd9082e835c.300x300x1.jpg',
+      song_art_image_url: 'https://images.genius.com/852f5a9cc447ed04997a6cd9082e835c.640x640x1.jpg',
+      stats: [Object],
+      title: 'NEXT COLOR PLANET',
+      title_with_featured: 'NEXT COLOR PLANET',
+      url: 'https://genius.com/Hoshimachi-suisei-next-color-planet-lyrics',
+      current_user_metadata: [Object],
+      album: [Object],
+      custom_performances: [Array],
+      description_annotation: [Object],
+      featured_artists: [],
+      lyrics_marked_complete_by: null,
+      media: [Array],
+      primary_artist: [Object],
+      producer_artists: [],
+      song_relationships: [Array],
+      verified_annotations_by: [],
+      verified_contributors: [],
+      verified_lyrics_by: [],
+      writer_artists: [Array]
+    }
+  }
+}
+{ artist_names: undefined, album: undefined, description: undefined }

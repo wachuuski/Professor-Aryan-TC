@@ -17,7 +17,6 @@ function findPrime(primePos){
             if (isPrime(i)==true){
                 primes.push(i);
             }
-
         }
     console.log(primes[primes.length-1]);
 }
