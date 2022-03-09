@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 
 function spew(){
-    return (fs.readFileSync('PC4input.txt','utf8').split("\n"));
+    return (fs.readFileSync('challenges/PC4input.txt','utf8').split("\n"));
 }
 function mapInit(){
     let data = spew();

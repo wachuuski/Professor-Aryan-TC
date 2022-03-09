@@ -1,13 +1,13 @@
-const fs = require ('fs');
+import * as fs from 'fs';
 function spew(){
-    return (fs.readFileSync('PC3input.txt','utf8').split("\n"));
+    return (fs.readFileSync('challenges/PC3input.txt','utf8').split("\n"));
 }
 
 function gamma(){
     let data = spew();
-    gammaValue = new Array;
+    let gammaValue = new Array;
     for (let i = 0; i < data[0].split('').length-1; i++){
-        findxth = new Array;
+        let findxth = new Array;
         let digitTrack = 0;
         for (let j = 0; j < data.length-1; j++){
             digitTrack += parseInt((data[j].split('')[i]));
@@ -26,7 +26,7 @@ function gamma(){
 }
 function epsilon(){
     let data = gamma();
-    epsilonValue = new Array
+    let epsilonValue = new Array
     for (let i = 0; i<data.length; i++){
         switch (data[i]){
             case 0:

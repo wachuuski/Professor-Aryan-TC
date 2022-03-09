@@ -249,28 +249,28 @@ function optimize() {
             pointsA += (proc * 5) + 5;
             pointsN += (proc * 5) + 5;
             pointsB += (proc * 5) + 10;
-            // if (points > bestWordPoints){
-            //     bestWord = word;
-            //     bestWordPoints = points;
-            // }
-            // if (pointsA > bestWordPointsA){
-            //     bestWordA = word
-            //     bestWordPointsA = pointsA;
-            // }
-            // if (pointsN > bestWordPointsN){
-            //     bestWordN = word
-            //     bestWordPointsN = pointsN;
-            // }
-            // if (pointsB > bestWordPointsB){
-            //     bestWordB = word
-            //     bestWordPointsB = pointsB;
-            // }
-            if (pointsA > 175) {
-                console.log("A better adjective was found: " + word + " at " + pointsA)
+            if (points > bestWordPoints){
+                bestWord = word;
+                bestWordPoints = points;
             }
-            if (pointsB > 175) {
-                console.log("A better both was found: " + word + " at " + pointsB)
+            if (pointsA > bestWordPointsA){
+                bestWordA = word
+                bestWordPointsA = pointsA;
             }
+            if (pointsN > bestWordPointsN){
+                bestWordN = word
+                bestWordPointsN = pointsN;
+            }
+            if (pointsB > bestWordPointsB){
+                bestWordB = word
+                bestWordPointsB = pointsB;
+            }
+            // if (pointsA > 175) {
+            //     console.log("A better adjective was found: " + word + " at " + pointsA)
+            // }
+            // if (pointsB > 175) {
+            //     console.log("A better both was found: " + word + " at " + pointsB)
+            // }
         }
     }
     console.log("best word was " + bestWord + " at " + bestWordPoints);

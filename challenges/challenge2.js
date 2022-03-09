@@ -1,6 +1,6 @@
-const fs = require ('fs');
+import * as fs from 'fs';
 function spew(){
-    return (fs.readFileSync('PC2input.txt','utf8').split("\n"));
+    return (fs.readFileSync('challenges/PC2input.txt','utf8').split("\n"));
 }
 
 function position(startX, startY){
