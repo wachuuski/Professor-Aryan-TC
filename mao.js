@@ -53,7 +53,15 @@ stack.push(deck.pop());
 let activeCard = stack[stack.length-1];
 function setActive(){
   activeCard = stack[stack.length-1];
-
+}
+function checkDeck(){
+  if (deck.length == 0){
+    console.log("Shuffling deck...");
+    let temp = stack.pop();
+    deck = stack.shuffle();
+    stack = [];
+    stack.push(temp.pop());
+  }
 }
 function readCard(card){
   let cardsuit = ""
@@ -127,7 +135,7 @@ function draw (playerid, number){
 //how does a turn work
 function turn (playerid){
   console.log("The top card is now the " + readCard(activeCard) + ".");
-  console.log("Player " + playerid + ", Start your turn");
+  console.log("Player " + (playerid+1) + ", Start your turn");
   prompt("Type anything to start: ");
   function readHand(playerid){
     for (let i = 0; i<playerList[playerid].hand.length;i++){
@@ -141,7 +149,9 @@ function turn (playerid){
   switch(toPlay){
     //unless they want to draw a card in which case go ahead
     case "draw": 
+      checkDeck();
       draw (playerid,1);
+      checkDeck();
       readHand(playerid);
       break;
     default:
@@ -150,8 +160,10 @@ function turn (playerid){
         // if it's not, force them to draw a card
         console.log("Illegal play.");
         draw (playerid,1);
+        checkDeck();
         readHand(playerid);
       }
+        //if it is, push it to the active stack and set it as the top card
       else if ((playerList[playerid].hand[toPlay-1].suit==activeCard.suit) || playerList[playerid].hand[toPlay-1].value==activeCard.value){
         stack.push(playerList[playerid].hand[toPlay-1])
         playerList[playerid].hand.splice(toPlay-1,1);
@@ -160,7 +172,7 @@ function turn (playerid){
       }     
   }
   console.clear(); 
-  console.log("Please pass the device to Player " + parseInt(playerid+1));
+  console.log("Please pass the device to Player " + parseInt(playerid+2));
 }
 let winner = "";
 rungame:{
