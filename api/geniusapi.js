@@ -21,26 +21,28 @@ async function getSong() {
 
 async function stitchDescription(){
     let song = await getSong().description;
+    console.log(typeof(song));
     let stitched = [];
-    let relevantFile = song
-    function searchAppend(){
-        for (let i = 0; i<relevantFile.length; i++){
-            switch (Array.isArray(relevantFile[i])){
+    function searchAppend(fill, file){
+        for (let i = 0; i<file.length; i++){
+            switch (Array.isArray(file[i])){
                 case false:
-                    stitched.push(relevantFile[i]);
+                    fill.push(file[i]);
                     break;
                 case true:
-                    relevantFile = relevantFile[i];
-                    searchAppend();
+                    file = file[i];
+                    searchAppend(fill, file[i]);
                     break;
             }
-        } 
+        }
+        return(stitched);
     }
-    
+    searchAppend(stitched,song)
+    console.log(stitched);
 }
 console.log(await stitchDescription());
-//console.log(await getSong());
-// async function main(){
-//     console.log(getSong());
-// }
-// main();
+console.log(await getSong());
+async function main(){
+    console.log(getSong());
+}
+main();

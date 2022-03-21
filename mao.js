@@ -125,6 +125,68 @@ function readCard(card){
   }
   return(cardvalue + " of " + cardsuit);
 }
+function shortReadCard(card){
+  let cardsuit = ""
+  let cardvalue = ""
+  switch(card.suit){
+    case 0:
+      cardsuit = "♣"
+      break;
+    case 1:
+      cardsuit = "♥"
+      break;
+    case 2:
+      cardsuit = "♠"
+      break;
+    case 3:
+      cardsuit = "♦"
+      break;
+  }
+  switch(card.value){
+    case 0:
+      return("Joker")
+    case 1:
+      cardvalue = "A"
+      break;
+    case 2:
+      cardvalue = "2"
+      break;
+    case 3:
+      cardvalue = "3"
+      break;
+    case 4:
+      cardvalue = "4"
+      break;
+    case 5:
+      cardvalue = "5"
+      break;
+    case 6:
+      cardvalue = "6"
+      break;
+    case 7:
+      cardvalue = "7"
+      break;
+    case 8:
+      cardvalue = "8"
+      break;
+    case 9:
+      cardvalue = "9"
+      break;
+    case 10:
+      cardvalue = "10"
+      break;
+    case 11:
+      cardvalue = "11"
+      break;
+    case 12:
+      cardvalue = "12"
+      break;
+    case 13:
+      cardvalue = "13"
+      break;
+  }
+  return(cardvalue+cardsuit);
+}
 console.log("The Game of Mao begins now. The starting card is " + readCard(activeCard) + ".");
 //creating draw function
 function draw (playerid, number){
@@ -139,7 +201,7 @@ function turn (playerid){
   prompt("Type anything to start: ");
   function readHand(playerid){
     for (let i = 0; i<playerList[playerid].hand.length;i++){
-      console.log(i+1 + ": " + readCard(playerList[playerid].hand[i]));
+      console.log(i+1 + ": " + shortReadCard(playerList[playerid].hand[i]));
     }
   }
   readHand(playerid)

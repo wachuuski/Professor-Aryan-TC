@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 function spew(){
-    return (fs.readFileSync('challenges/PC3input.txt','utf8').split("\n"));
+    return (fs.readFileSync('PC3input.txt','utf8').split("\n"));
 }
 
 function gamma(){
